@@ -1,0 +1,2 @@
+name='themesidebar'
+nameCamel='ThemeSideBar'
