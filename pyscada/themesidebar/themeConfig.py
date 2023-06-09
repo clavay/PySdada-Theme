@@ -1,2 +1,0 @@
-name='themesidebar'
-nameCamel='ThemeSideBar'

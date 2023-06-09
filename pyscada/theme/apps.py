@@ -5,11 +5,11 @@ import os
 from django.apps import AppConfig
 from django.utils.translation import ugettext_lazy as _
 
-from . import themeConfig
+from . import __app_name__
 
 
-class PyScadaThemeConfig(AppConfig):
-    name = 'pyscada.'  + themeConfig.name
-    verbose_name = _("PyScada "  + themeConfig.nameCamel)
+class PyScadaModbusConfig(AppConfig):
+    name = 'pyscada.' + __app_name__.lower()
+    verbose_name = _("PyScada " + __app_name__ + " Master/Client")
     path = os.path.dirname(os.path.realpath(__file__))
     default_auto_field = 'django.db.models.AutoField'
