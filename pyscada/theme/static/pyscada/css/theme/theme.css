@@ -278,6 +278,7 @@ i, span {
 .wrapper {
     display: flex;
     align-items: stretch;
+    padding-bottom: 30px;
 }
 
 .sidebarCollapse {
@@ -442,7 +443,6 @@ a.article, a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
-    min-height: 100vh;
     transition: all 0.3s;
     padding-bottom: 0px;
     padding-right: 0px;
