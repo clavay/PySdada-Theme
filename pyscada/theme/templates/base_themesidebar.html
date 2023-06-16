@@ -8,11 +8,13 @@
     <!-- Side bar -->
     <nav id="sidebar">
         <div class="sidebar-header">
-          {% block sidebar_logo %}{% endblock %}
+            {% block sidebar_logo %}
+                <h3>SIRENA</h3>
+                <strong style="font-size:inherit;">SIRENA</strong>
+            {% endblock %}
             {% block navbar_logo %}{% endblock %}
         </div>
         <ul class="list-unstyled components navbar-nav">
-
             {% block top_menu_left %}{% endblock %}
             {% block top_menu_left_collapsed %}{% endblock %}
         </ul>
@@ -25,7 +27,7 @@
 
               </li>
 
-              <span class="navbar-toggle">
+              <span class="navbar-toggle" style="float:left;display:none;">
               {% if user.pk %}
               <li class="dropdown"><!-- User -->
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon  glyphicon-user"></span> {% if user.first_name %}{{ user.first_name }} {{ user.last_name }}{% else %}{{ user.username }}{% endif %}<b class="caret"></b></a>
@@ -57,7 +59,7 @@
               <li>
                   <a href="javascript:;" style="padding-left:0px; padding-right:0px;width:40px;height:30px;display: none;"><img class="loadingAnimation" style="display: inline-block; height: 14px;" src="/static/pyscada/img/load.gif" alt="loading" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Initialisation"></a>
               </li>
-              <li class="AutoUpdateButtonParent" style="width:100px;height:30px;padding-top: 5px;margin-right:-25px;display: none;">
+              <li class="AutoUpdateButtonParent" style="width:100px;height:20px;padding-top: 5px;margin-right:-25px;display: none;">
                   <input class="AutoUpdateButton hidden" type="checkbox" data-inverse="true" data-size="mini" data-on-color="success" data-off-color="default" checked>
               </li>
               <li style="width:40px;height:30px;display: none;">
@@ -70,11 +72,9 @@
           </ul>
         </strong>
     </nav>
-{% endblock %}
 
-{% block top_area %}
     <!-- Top bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="topbar sidebarActive navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button type="button" id="sidebarCollapse2" class="sidebarCollapse">
                 <span class="icon-bar" style="display: block;width: 22px;height: 2px;border-radius: 1px;background-color: #FFF;"></span>
@@ -136,4 +136,8 @@
               </div>
           </div>
     </nav>
+{% endblock %}
+
+{% block top_area %}
+
 {% endblock %}
