@@ -310,7 +310,7 @@ i, span {
     color: var(--couleur_sidebarFont);
     transition: all 0.3s;
     position: fixed;
-    z-index: 2000;
+    z-index: 1025;
     height: 100%;
     overflow-y: auto;
 }
