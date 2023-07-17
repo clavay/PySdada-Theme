@@ -61,7 +61,7 @@
     width: 100%;
     position: fixed;
     padding-left: 80px !important;
-    z-index: 1000;
+    z-index: 1015;
     transition: all 0.3s;
 }
 
