@@ -84,7 +84,6 @@
 .sub-page {
   	padding-top:10px;
   	padding-left: 10px;
-    height: 100%;
     width: 100%;
     overflow-x: hidden;
     background-color: var(--couleurSubpageBG);
@@ -460,7 +459,7 @@ a.article, a.article:hover {
     transition: all 0.3s;
     padding-bottom: 0px;
     padding-right: 0px;
-    padding-top: 86px;
+    padding-top: 106px;
     padding-left: 80px;
     transition: all 0.3s;
 }
