@@ -1,28 +1,26 @@
 {% extends "view.html" %}
-
 {% load i18n static %}
-
 {% block head_css %}
     {% include "sidebar_theme_css.html" %}
 {% endblock %}
-
 {% block top_menu_left %}
     {% for page in page_list %}
-        <li><a href="#{{page.link_title}}" class="hidden-xs">{{page.title|safe}}</a></li>
+        <li>
+            <a href="#{{ page.link_title }}" class="hidden-xs">{{ page.title|safe }}</a>
+        </li>
     {% endfor %}
 {% endblock %}
-
 {% block top_menu_left_collapsed %}
     {% for page in page_list %}
-        <li><a href="#{{page.link_title}}" class="visible-xs" style="float:none;">{{page.title|safe}}</a></li>
+        <li>
+            <a href="#{{ page.link_title }}" class="visible-xs" style="float:none;">{{ page.title|safe }}</a>
+        </li>
     {% endfor %}
 {% endblock %}
-
 {% block include_bottom %}
     {% for js_file in javascript_files_list %}
         <script language="javascript" type="text/javascript" src={{ js_file.src }}></script>
     {% endfor %}
-
     <script type="text/javascript">
         $(document).ready(function () {
             document.querySelector(".footer").classList.add('sidebarActive');
@@ -36,13 +34,21 @@
         });
     </script>
 {% endblock %}
-
 {% block top_menu_right %}
-    <li><a id='page-load-label'>Loading... </a></li>
-    <li><meter id='page-load-state' value="0" min="0" max="100" style="padding-top: 15px;">0</meter></li>
+    <li>
+        <a id='page-load-label'>Loading...</a>
+    </li>
+    <li>
+        <meter id='page-load-state'
+               value="0"
+               min="0"
+               max="100"
+               style="padding-top: 15px">0</meter>
+    </li>
     {% for panel in control_list %}
         {% if panel.visible %}
-            <li class="dropdown"><!-- {{ panel.title|upper }} -->
+            <li class="dropdown">
+                <!-- {{ panel.title|upper }} -->
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span> {{ panel.title }}<strong class="caret"></strong></a>
                 <div class="dropdown-menu" style="padding: 15px; width:715px;">
                     <div class="control-panel">
@@ -61,14 +67,19 @@
             </li>
         {% endif %}
     {% endfor %}
-        <li class="dropdown"><!-- Date range picker -->
-            <a class="daterangepicker_parent hidden" id="daterange" style="padding-top: 5px; cursor: pointer; width: 100%">
-                <i class="glyphicon glyphicon-calendar"></i>&nbsp;
-                <span>Date range picker is loading. Please wait...</span> <strong class="caret"></strong>
-            </a>
-        </li>
-<!-- Charts timeline -->
-  <!--      <li class="dropdown">
+    <li class="dropdown">
+        <!-- Date range picker -->
+        <a class="daterangepicker_parent hidden"
+           id="daterange"
+           style="padding-top: 5px;
+                  cursor: pointer;
+                  width: 100%">
+            <i class="glyphicon glyphicon-calendar"></i>&nbsp;
+            <span>Date range picker is loading. Please wait...</span> <strong class="caret"></strong>
+        </a>
+    </li>
+    <!-- Charts timeline -->
+    <!--      <li class="dropdown">
             <a class="dropdown-toggle timeline hidden" id="timeline_slider" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-resize-horizontal"></span> Timeline slider <strong class="caret"></strong></a>
             <div class="dropdown-menu" style="padding: 15px; width: 50vw;">
                 <div class='col-md-12 col-sm-12' data-toggle="tooltip" data-placement="top" title="" data-original-title="Display data filter">
