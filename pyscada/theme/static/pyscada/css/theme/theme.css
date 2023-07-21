@@ -391,6 +391,7 @@ span {
 
 #sidebar ul li {
   float: none;
+  list-style-type: none;
 }
 
 #sidebar ul li a {
@@ -434,7 +435,7 @@ a[aria-expanded="true"]::before {
 ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
-  background: #000;
+  /*background: #000;*/
 }
 
 ul.CTAs {
