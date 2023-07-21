@@ -355,6 +355,10 @@ span {
   padding: 10px !important;
 }
 
+#sidebar.active ul ul {
+  padding-left: 0px !important;
+}
+
 #sidebar.active a[aria-expanded="false"]::before,
 #sidebar.active a[aria-expanded="true"]::before {
   top: auto;
