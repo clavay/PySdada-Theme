@@ -45,6 +45,11 @@ Contribute
  - Issue Tracker: https://github.com/clavay/PyScada-Theme/issues
  - Source Code: https://github.com/clavay/PyScada-Theme
 
+ - Format code before sending a pull request :
+  - python code using `black <https://black.readthedocs.io>`_
+  - django template, JavaScript and CSS using `DjHTML <https://github.com/rtts/djhtml>`_
+
+
 License
 -------
 
