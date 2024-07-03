@@ -262,8 +262,8 @@ span {
   font-weight: 600;
 }
 
-.control-panel .input-group-addon {
-  border-radius: 15px;
+.control-panel .input-group-addon, .control-panel .form-control {
+  border-radius: 15px !important;
 }
 
 .control-panel .input-group-addon.input-group-addon-label {
