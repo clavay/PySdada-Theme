@@ -28,3 +28,8 @@ class PyScadaThemeConfig(AppConfig):
             pass
         except OperationalError:
             pass
+        except Theme.MultipleObjectsReturned:
+            Theme.objects.filter(
+                base_filename="base_themesidebar",
+                view_filename="view_themesidebar",
+            ).last().delete()
